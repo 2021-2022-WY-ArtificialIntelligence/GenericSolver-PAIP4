@@ -1,0 +1,17 @@
+title = "Simple Demo"
+
+traits = ["a","b","c","d","e"]
+initial_state = ["a","c"]
+goal_state = ["b","e"]
+
+[[operations]]
+name = "a->b"
+precond = ["a"]
+add = ["b"]
+remove = ["a"]
+
+[[operations]]
+name = "c-explosion"
+precond = ["c"]
+add = ["d","e"]
+remove = []
