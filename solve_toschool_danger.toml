@@ -1,0 +1,53 @@
+
+title = "Get to school, contains circular action 'ask phone number'"
+
+traits = ["kid at home", "kid at school", "car works",
+          "car needs battery", "shop knows problem",
+          "have money", "shop has money", "know phone number", "have internet",
+          "in communication with shop"]
+
+initial_state = ['kid at home', 'kid at home','car needs battery','have money']
+goal_state = ["kid at school"]
+
+[[operations]]
+name = "drive kid to school"
+precond = ["kid at home", "car works"]
+add = ["kid at school"]
+remove = ["kid at home"]
+
+[[operations]]
+name = "shop installs battery"
+precond = ["car needs battery", "shop knows problem", "shop has money"]
+add = ["car works"]
+remove = ["car needs battery"]
+
+[[operations]]
+name = "tell shop problem"
+precond = ["in communication with shop"]
+add = ["shop knows problem"]
+remove = []
+
+[[operations]]
+name = "telephone shop"
+precond = ["know phone number"]
+add = ["in communication with shop"]
+remove = []
+
+[[operations]]
+name = "look up phone number"
+precond = ["have internet"]
+add = ["know phone number"]
+remove = []
+
+[[operations]]
+name = "give shop money"
+precond = ["have money"]
+add = ["shop has money"]
+remove = ["have money"]
+
+[[operations]]
+name = "ask phone number"
+precond = ["in communication with shop"]
+add = ["know phone number"]
+remove = []
+
