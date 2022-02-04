@@ -8,3 +8,13 @@ Automatically runs the main file, which executes the tests in `genericsolver_tes
 * ReplIt
     https://replit.com/@maueroats/GenericSolver-PAIP4#README.md
     
+## Notes
+
+* The set with no elements is `[]` not `[""]`. Do not make any sets containing the empty string.
+* Produce a set of traits by using the `trait_set` function:
+
+      solverdemo.traitset[{"red shirt", "blue pants"}]
+* Find a single `SolverTrait` object by using the lookup dictionary:
+
+      solverdemo.operation_lookup["red shirt on"]
+
