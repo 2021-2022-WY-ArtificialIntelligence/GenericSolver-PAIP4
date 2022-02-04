@@ -48,4 +48,4 @@ class TestGeneric(unittest.TestCase):
         """school5 get to school with an extra circular action trying to get the phone number"""
         solverdata = gpsolver.school5
         result = runsolver(solverdata)
-        self.assertTrue(solverdata.goal_state <= result)
+        self.assertIsNone(result)
