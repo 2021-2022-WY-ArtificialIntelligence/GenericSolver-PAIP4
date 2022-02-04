@@ -2,5 +2,5 @@
 debug = True
 def dprint(*args):
     if debug:
-        print(*args)
+        print(*args, flush=True)
 
