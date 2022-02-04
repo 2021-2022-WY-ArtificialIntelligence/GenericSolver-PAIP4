@@ -202,3 +202,6 @@ school3 = copy.copy(school1)
 school3.title = "Get to school, impossible version, should fail"
 school3.initial_state = school3.safe_trait_set({'kid at home','car needs battery','have money'})
 
+school4 = copy.copy(school1)
+school4.title = "Problematic case - spending the money means you cannot actually finish"
+school4.goal_state = school4.safe_trait_set({'kid at school','have money'})
