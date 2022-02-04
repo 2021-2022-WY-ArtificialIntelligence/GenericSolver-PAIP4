@@ -17,4 +17,7 @@ Automatically runs the main file, which executes the tests in `genericsolver_tes
 * Find a single `SolverTrait` object by using the lookup dictionary:
 
       solverdemo.operation_lookup["red shirt on"]
+* If you want to interact with your main file, modify the `.replit` config so it says:
 
+      run = "python -i main.py"
+      
