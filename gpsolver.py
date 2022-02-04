@@ -190,7 +190,6 @@ name="cookie"
 """
 
 d = tomli.loads(simpledemo)
-
 with open("solve_toschool.toml","rb") as f:
     school1 = SolverData(tomli.load(f))
 
@@ -205,3 +204,8 @@ school3.initial_state = school3.safe_trait_set({'kid at home','car needs battery
 school4 = copy.copy(school1)
 school4.title = "Problematic case - spending the money means you cannot actually finish"
 school4.goal_state = school4.safe_trait_set({'kid at school','have money'})
+
+with open("solve_toschool_danger.toml","rb") as f:
+    school5 = SolverData(tomli.load(f))
+
+    
