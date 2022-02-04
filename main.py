@@ -40,8 +40,9 @@ newstate = op.apply(state)
 
 print(f"End state: {newstate}")
 
+wanted = simpledemo.trait_set({'b','c'})
 print(f"this is a problem? no")
-print(f"how about this one? {newstate}")
+print(f"how about this one? {wanted}")
 
 ## This is how you run test cases in replit
 unittest.main(module='genericsolver_test')
